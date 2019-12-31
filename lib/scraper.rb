@@ -33,6 +33,6 @@ class Scraper
     # binding.pry
   end
 
-Scraper.new.get_page
+# Scraper.new.get_page
 
 end
