@@ -21,16 +21,16 @@ class Scraper
   def get_page
     doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
 
-    doc.css(".post").each do |post|
-      course = Course.new
-      course.title = post.css("h2").text
-      course.schedule = post.css(".date").text
-      course.description = post.css("p").text
-      # for each iteration over the collection of Nokogiri XML elements returned to us by the doc.css(".post") line, we are making a new instance of the Course class and giving that instance the title, schedule, and description extracted from the XML
-    end
-
-
-    binding.pry
+    # doc.css(".post").each do |post|
+    #   course = Course.new
+    #   course.title = post.css("h2").text
+    #   course.schedule = post.css(".date").text
+    #   course.description = post.css("p").text
+    #   # for each iteration over the collection of Nokogiri XML elements returned to us by the doc.css(".post") line, we are making a new instance of the Course class and giving that instance the title, schedule, and description extracted from the XML
+    # end
+    #
+    #
+    # binding.pry
   end
 
 Scraper.new.get_page
