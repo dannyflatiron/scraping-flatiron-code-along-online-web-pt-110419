@@ -26,6 +26,7 @@ class Scraper
       course.title = post.css("h2").text
       course.schedule = post.css(".date").text
       course.description = post.css("p").text
+      # for each iteration over the collection of Nokogiri XML elements returned to us by the doc.css(".post") line, we are making a new instance of the Course class and giving that instance the title, schedule, and description extracted from the XML
     end
 
 
